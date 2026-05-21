@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SentraX - URL Security Scanner</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Loading State -->
+  <div id="loadingState" class="container hidden">
+    <div class="spinner"></div>
+    <p>Analyzing URL...</p>
+  </div>
+
+  <!-- Success Message State -->
+  <div id="successState" class="container hidden">
+    <div class="header">
+      <h1>🔐 SentraX</h1>
+    </div>
+    <div class="content" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px;">
+      <div style="font-size: 48px; animation: pulse 1s infinite;">✅</div>
+      <p style="font-size: 16px; font-weight: 600; text-align: center;">Login Successful!</p>
+      <p style="font-size: 12px; color: #94a3b8; text-align: center;">Syncing extension...</p>
+    </div>
+  </div>
+
+  <!-- Login State -->
+  <div id="loginState" class="container hidden">
+    <div class="header">
+      <h1>🔐 SentraX</h1>
+      <p>URL Security Scanner</p>
+    </div>
+    <div class="content">
+      <p class="message">Please log in to use SentraX</p>
+      <button id="loginButton" class="btn btn-primary">Open Login</button>
+    </div>
+    <div class="footer">
+      <small>Secure URL analysis powered by SentraX</small>
+    </div>
+  </div>
+
+  <!-- Main State -->
+  <div id="mainState" class="container hidden">
+    <!-- Header -->
+    <div class="header">
+      <div class="header-title">
+        <h1>🔐 SentraX</h1>
+        <button id="logoutButton" class="btn-icon" title="Logout">
+          <span>⏻</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+      <!-- URL Display -->
+      <div class="url-section">
+        <p class="label">Current URL:</p>
+        <div class="url-display">
+          <span id="urlText">—</span>
+          <button id="copyButton" class="btn-copy" title="Copy URL">📋</button>
+        </div>
+      </div>
+
+      <!-- Status Display -->
+      <div id="statusSection" class="status-section hidden">
+        <!-- Safe Status -->
+        <div id="safeStatus" class="status safe hidden">
+          <div class="status-icon">✅</div>
+          <div class="status-content">
+            <h3>Safe</h3>
+            <p>This site appears to be safe</p>
+          </div>
+          <div class="risk-badge safe">
+            <span id="safeRisk">—</span>%
+          </div>
+        </div>
+
+        <!-- Suspicious Status -->
+        <div id="suspiciousStatus" class="status suspicious hidden">
+          <div class="status-icon">⚠️</div>
+          <div class="status-content">
+            <h3>Suspicious</h3>
+            <p>Proceed with caution</p>
+          </div>
+          <div class="risk-badge suspicious">
+            <span id="suspiciousRisk">—</span>%
+          </div>
+        </div>
+
+        <!-- Dangerous Status -->
+        <div id="dangerousStatus" class="status dangerous hidden">
+          <div class="status-icon">🚨</div>
+          <div class="status-content">
+            <h3>Dangerous</h3>
+            <p>This site has known threats</p>
+          </div>
+          <div class="risk-badge dangerous">
+            <span id="dangerousRisk">—</span>%
+          </div>
+        </div>
+
+        <!-- Threat Details -->
+        <div id="threatDetails" class="threat-details hidden">
+          <p class="label">Threat Type:</p>
+          <p id="threatType" class="detail-value">—</p>
+        </div>
+      </div>
+
+      <!-- Error Display -->
+      <div id="errorMessage" class="error-message hidden"></div>
+
+      <!-- No Analysis Yet -->
+      <div id="noAnalysis" class="no-analysis">
+        <p>📊 URL analysis pending...</p>
+        <button id="checkNowButton" class="btn btn-secondary">Check Now</button>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <small>Protecting your online safety • v1.0.0</small>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

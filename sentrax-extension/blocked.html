@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SentraX - Website Blocked</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .container {
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.95) 100%);
+      border: 1px solid rgba(0, 212, 255, 0.2);
+      border-radius: 16px;
+      padding: 60px 40px;
+      max-width: 600px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(10px);
+    }
+
+    .icon {
+      font-size: 80px;
+      margin-bottom: 24px;
+      animation: shake 0.5s ease-in-out;
+    }
+
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-10px); }
+      75% { transform: translateX(10px); }
+    }
+
+    h1 {
+      color: #fff;
+      font-size: 32px;
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+
+    .subtitle {
+      color: #cbd5e1;
+      font-size: 16px;
+      margin-bottom: 32px;
+      line-height: 1.6;
+    }
+
+    .info-box {
+      background: rgba(239, 68, 68, 0.1);
+      border: 1px solid rgba(239, 68, 68, 0.3);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 32px;
+      text-align: left;
+    }
+
+    .info-box h3 {
+      color: #ef4444;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .info-box p {
+      color: #cbd5e1;
+      font-size: 14px;
+      line-height: 1.6;
+      word-break: break-all;
+    }
+
+    .url-display {
+      background: rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(0, 212, 255, 0.2);
+      border-radius: 8px;
+      padding: 12px;
+      margin-top: 12px;
+      font-family: 'Courier New', monospace;
+      font-size: 12px;
+      color: #00d4ff;
+      word-break: break-all;
+    }
+
+    .reason-section {
+      background: rgba(34, 197, 94, 0.1);
+      border: 1px solid rgba(34, 197, 94, 0.3);
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 32px;
+    }
+
+    .reason-section h4 {
+      color: #22c55e;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+
+    .reason-section p {
+      color: #cbd5e1;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .actions {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    button {
+      padding: 12px 24px;
+      border-radius: 8px;
+      border: none;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .btn-back {
+      background: rgba(0, 212, 255, 0.1);
+      color: #00d4ff;
+      border: 1px solid rgba(0, 212, 255, 0.3);
+    }
+
+    .btn-back:hover {
+      background: rgba(0, 212, 255, 0.2);
+      border: 1px solid rgba(0, 212, 255, 0.5);
+      box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+    }
+
+    .btn-home {
+      background: rgba(34, 197, 94, 0.1);
+      color: #22c55e;
+      border: 1px solid rgba(34, 197, 94, 0.3);
+    }
+
+    .btn-home:hover {
+      background: rgba(34, 197, 94, 0.2);
+      border: 1px solid rgba(34, 197, 94, 0.5);
+      box-shadow: 0 0 20px rgba(34, 197, 94, 0.3);
+    }
+
+    .footer {
+      margin-top: 32px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(0, 212, 255, 0.1);
+    }
+
+    .footer p {
+      color: #64748b;
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    .footer a {
+      color: #00d4ff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer a:hover {
+      color: #22c55e;
+    }
+
+    .header-branding {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 24px;
+      font-size: 24px;
+      font-weight: 700;
+      color: #00d4ff;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 40px 24px;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+
+      .icon {
+        font-size: 60px;
+      }
+
+      .actions {
+        flex-direction: column;
+      }
+
+      button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header-branding">
+      🔐 SentraX
+    </div>
+
+    <div class="icon">🚫</div>
+
+    <h1>Website Blocked</h1>
+
+    <p class="subtitle">
+      <span id="blockMessage">This website has been blocked by your administrator or parental controls for your protection.</span>
+    </p>
+
+    <div class="info-box">
+      <h3>📍 Blocked URL</h3>
+      <div class="url-display" id="blockedUrl">Loading...</div>
+    </div>
+
+    <div class="reason-section">
+      <h4>✅ Reason</h4>
+      <p id="blockedReason">This site matches a blocked content rule.</p>
+    </div>
+
+    <div class="actions">
+      <button class="btn-back" onclick="goBack()">← Go Back</button>
+      <button class="btn-home" onclick="goHome()">🏠 Go to Homepage</button>
+    </div>
+
+    <div class="footer">
+      <p>
+        Questions or concerns?<br>
+        Contact your administrator or visit <a href="http://localhost:5173" target="_blank">SentraX Dashboard</a>
+      </p>
+    </div>
+  </div>
+
+  <script>
+    // Extract URL and reason from query parameters
+    function getQueryParam(param) {
+      const searchParams = new URLSearchParams(window.location.search);
+      return searchParams.get(param) || 'Unknown';
+    }
+
+    // Display blocked information
+    document.addEventListener('DOMContentLoaded', () => {
+      const url = getQueryParam('url');
+      const reason = getQueryParam('reason');
+
+      document.getElementById('blockedUrl').textContent = url;
+      
+      // Update reason display
+      const blockedReasonEl = document.getElementById('blockedReason');
+      const blockMessageEl = document.getElementById('blockMessage');
+      
+      if (reason === 'Blocked by parent rule') {
+        blockedReasonEl.textContent = 'This website has been blocked by your parent as part of parental controls.';
+        blockMessageEl.textContent = 'This website has been blocked by your parent or administrator.';
+      } else if (reason && reason.includes('Dangerous site detected')) {
+        blockedReasonEl.textContent = 'This website has been flagged as dangerous and contains potential threats (malware, phishing, etc).';
+        blockMessageEl.textContent = 'Dangerous Website Blocked for Your Protection';
+      } else if (reason && reason !== 'Unknown') {
+        blockedReasonEl.textContent = reason;
+      } else {
+        blockedReasonEl.textContent = 'This site matches a blocked content rule.';
+      }
+    });
+
+    // Go back to previous page
+    function goBack() {
+      window.history.go(-2); // Go back 2 pages to skip the blocked page itself
+    }
+
+    // Go to homepage
+    function goHome() {
+      window.location.href = 'http://localhost:5173';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+# Python
+venv/
+env/
+__pycache__/
+*.pyc
+
+# Django
+db.sqlite3
+media/
+staticfiles/
+
+# Environment
+.env
+
+# React
+node_modules/
+dist/
+build/
+
+# Logs
+*.log
+
+# ML Models
+*.pkl
+*.joblib
+
+# VS Code
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
